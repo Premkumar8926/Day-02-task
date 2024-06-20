@@ -1,0 +1,59 @@
+Window Object:
+	-Represents the browser window and is the global object in client-side JavaScript.
+	-Handles browser interaction, navigation, timing, and event management.
+	-Methods include alert(), open(), close(), and controls navigation via location.
+
+Example 1: Popup Windows
+	-Use Case: Opening a new browser window or a popup window.
+	// Open a new window
+	const newWindow = window.open('https://example.com', '_blank');
+
+Example 2: Timing Functions
+	-Use Case: Scheduling tasks to execute after a certain delay or at regular intervals.
+	// Execute a function after 2 seconds
+	window.setTimeout(() => {
+    	console.log('Delayed function executed');
+	}, 2000);
+
+Example 3: Browser Location
+	-Use Case: Redirecting or reloading the browser window based on user actions.
+	// Redirect to another page
+	window.location.href = 'https://example.com';
+
+
+
+Document Object:
+	-Represents the loaded HTML document within the browser window.
+	-Provides methods to access and manipulate document content and structure.
+	-Methods include getElementById(), querySelector(), and createElement() for DOM manipulation.
+
+Example 1: DOM Manipulation
+	-Use Case: Accessing and modifying elements within the loaded HTML document.
+	// Change the text content of an element
+	const header = document.getElementById('header');
+	header.textContent = 'New Header Text';
+
+Example 2: Event Handling
+	-Use Case: Responding to user interactions within the document, such as clicks or form submissions.
+	// Add an event listener to a button click
+	const button = document.getElementById('myButton');
+	button.addEventListener('click', () => {
+    	console.log('Button clicked!');
+	});
+
+Example 3: Content Creation
+	-Use Case: Dynamically creating and adding new elements to the document.
+	// Create a new paragraph element and append it to an existing div
+	const newParagraph = document.createElement('p');
+	newParagraph.textContent = 'This is a new paragraph.';
+	const parentDiv = document.getElementById('parentDiv');
+	parentDiv.appendChild(newParagraph);
+
+Key Differences:
+	-Scope: Window is the global browser environment; Document is specific to the loaded HTML content.
+	-Purpose: Window manages browser window tasks; Document handles HTML document manipulation.
+	-Methods: Window deals with browser control and timing; Document focuses on DOM manipulation and content access.
+
+Conclusion
+	Understanding when and how to use the window and document objects in JavaScript is essential for effective web development. The window object manages the overall browser environment and interaction, while the document object allows manipulation and interaction with the specific HTML content loaded in the browser window. By leveraging their respective capabilities and methods, developers can create dynamic and interactive web applications that respond to user actions and enhance user experience effectively.
+
